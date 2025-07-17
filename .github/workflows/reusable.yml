@@ -6,9 +6,6 @@ on:
       environment:
         required: true
         type: string
-    secrets:
-      NESTED_SECRET:
-        required: true
 
 jobs:
   do-something:
