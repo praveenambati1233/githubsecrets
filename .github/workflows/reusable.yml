@@ -17,4 +17,4 @@ jobs:
     - name: Show env and secret
       run: |
         echo "Environment is ${{ inputs.environment }}"
-        echo "Secret length: ${#NESTED_SECRET}" # avoid echoing secrets directly!
+        echo "Secret length: ${NESTED_SECRET}" # avoid echoing secrets directly!
