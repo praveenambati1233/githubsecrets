@@ -1,0 +1,20 @@
+name: Reusable Workflow
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+    secrets:
+      NESTED_SECRET:
+        required: true
+
+jobs:
+  do-something:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Show env and secret
+      run: |
+        echo "Environment is ${{ inputs.environment }}"
+        echo "Secret length: ${#NESTED_SECRET}" # avoid echoing secrets directly!
