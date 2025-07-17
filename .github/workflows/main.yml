@@ -5,6 +5,7 @@ on:
 
 jobs:
   call-reusable:
+    secrets: inherit
     uses: ./.github/workflows/reusable.yml
     with:
       environment: prod
