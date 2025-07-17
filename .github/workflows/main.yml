@@ -9,4 +9,4 @@ jobs:
     with:
       environment: prod
     secrets:
-      NESTED_SECRET: ${{ secrets.MY_SECRET }}
+      NESTED_SECRET: ${{ secrets.MY_SECRETS }}
