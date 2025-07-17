@@ -14,6 +14,14 @@ jobs:
   do-something:
     runs-on: ubuntu-latest
     steps:
+    - name: Check secret presence
+      run: |
+        if [ -z "$NESTED_SECRET" ]; then
+          echo "Secret is empty!"
+        else
+          echo "Secret is set, length: ${#NESTED_SECRET}"
+        fi
+  
     - name: Show env and secret
       run: |
         echo "Environment is ${{ inputs.environment }}"
