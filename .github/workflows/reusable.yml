@@ -16,5 +16,5 @@ jobs:
       run: |
         echo "Environment is ${{ inputs.environment }}"
         echo "Secret :  ${{ secrets.MY_SECRET }}"
-        echo "Secret is set, length: ${#NESTED_SECRET}"
+        echo "Secret is set, length:  ${{ secrets.MY_SECRET }}"
 
