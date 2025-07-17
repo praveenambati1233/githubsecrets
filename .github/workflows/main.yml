@@ -9,3 +9,10 @@ jobs:
     uses: ./.github/workflows/reusable.yml
     with:
       environment: prod
+  print-secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print secret
+        run: echo "Secret value is ${{ secrets.MY_SECRET }}"
+
+
